@@ -6,7 +6,7 @@
 3.用simpleITK
 4.不要使用手动输入公式来对数据进行处理
 5.读取dicom的tag组成新的dicom
-
+6.
 
 ### 具体实现
 
@@ -26,7 +26,7 @@ arr = sitk.GetArrayFromImage(ds)
 
 ###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzIyNDc4MDcsMTQxNzM0ODk1LDIwNz
-I1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2
-MjJdfQ==
+eyJoaXN0b3J5IjpbLTQ2NDg5NDI3OSwxNDE3MzQ4OTUsMjA3Mj
+UwMzQ5NywtNjc1NDU3OTg4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYy
+Ml19
 -->
