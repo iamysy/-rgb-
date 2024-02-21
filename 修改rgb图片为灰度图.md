@@ -63,7 +63,9 @@ for key in input_dcm.GetMetaDataKeys():
 - 思路5：创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
 ```
 # 先将numpy数组转为像素信息
-gray_img = sitk,G
+gray_img = sitk.GetImageFromArray(gray_arr)
+# 再将tags内的信息存入至dcm文件内
+tag
 ```
 
 
@@ -73,7 +75,7 @@ gray_img = sitk,G
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDEyNTQzMSwtMTExNTc2NjY4OCwxNz
+eyJoaXN0b3J5IjpbLTc0NTE3NjQzNCwtMTExNTc2NjY4OCwxNz
 kwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4Njcy
 NTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLT
 Y3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
