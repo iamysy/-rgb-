@@ -5,7 +5,7 @@
 2.最好是可以在内存中解决RGB图->灰度图
 3.用simpleITK
 4.不要使用手动输入公式来对数据进行处理
-5.
+5.读取dicom的tag组成新的dicom
 
 ### 具体实现
 
@@ -25,6 +25,6 @@ arr = sitk.GetArrayFromImage(ds)
 
 ###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MzI5NTg5NCwyMDcyNTAzNDk3LC02Nz
-U0NTc5ODgsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NT
+Q1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 -->
