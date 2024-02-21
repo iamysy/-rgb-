@@ -31,13 +31,34 @@ arr = sitk.GetArrayFromImage(ds)
 	- 使用opencv进行灰度图的转化
 ```
 # 需要遍历每个dcm的每帧
-for i in range
+for i in range(input_arr.shape[0]):
+	gray_image[i] = cv2.cvtColor(input_arr[i], cv2.COLOR_RGB2GRAY)
 ```
 	- 根据scikit-image的公式自己编写公式（dot）进行灰度图的转化
 ```
 gray_arr = np.dot(arr[...,:3], [0.2989, 0.5870, 0.1140]).astype(np.uint8)
 ```
-- 
+- 思路4：
+```
+
+# 创建tags字典存储tag信息
+
+tags = {}
+
+for key in input_dcm.GetMetaDataKeys():
+
+	gray_image.SetMetaData(key, input_dcm.GetMetaData(key).encode('utf-8', 'ignore').decode('utf-8'))
+
+tags[key] = input_dcm.GetMetaData(key).encode('utf-8', 'ignore').decode('utf-8')
+
+# print(key, ':', input_dcm.GetMetaData(key))
+
+# print(f"{key} : {input_dcm.GetMetaData(key)}")
+
+# print(tags)
+
+return tags
+```
 
 
 
@@ -62,8 +83,8 @@ arr = sitk.GetArrayFromImage(ds)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDgzODk0NywtMTgwMDg3MTIzNSw5Mj
-AzMTAyNjYsLTQxODY3MjU0MSwtNDY0ODk0Mjc5LDE0MTczNDg5
-NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgzODcyNiwyMD
-QwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMjEzNTEyOTcwNiwxNzkwODM4OTQ3LC0xOD
+AwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00NjQ4OTQy
+NzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMT
+U0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 -->
