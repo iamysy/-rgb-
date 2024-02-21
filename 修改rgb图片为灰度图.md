@@ -65,7 +65,9 @@ for key in input_dcm.GetMetaDataKeys():
 # 先将numpy数组转为像素信息
 gray_img = sitk.GetImageFromArray(gray_arr)
 # 再将tags内的信息存入至dcm文件内
-tag
+for tag,value in tags.items():
+	gray_image.SetMetaData(str(tag), str(value))
+# 存入tag会出现，漏传（group lenth），错传(series uid)，无法识别
 ```
 
 
@@ -75,7 +77,7 @@ tag
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NTE3NjQzNCwtMTExNTc2NjY4OCwxNz
+eyJoaXN0b3J5IjpbMTE2MzExOTExOCwtMTExNTc2NjY4OCwxNz
 kwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4Njcy
 NTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLT
 Y3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
