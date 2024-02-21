@@ -27,9 +27,11 @@ arr = sitk.GetArrayFromImage(ds)
 ### 思路
 1.先读取dcm文件
 2.读取表示图像的像素矩阵，转化为numpy数组
-3.读取dcm中
+3.将
+3.读取dcm中的tag信息，作为key-value内容
+4.创建一个新的dcm类型的文件，将
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MDI3NzUxLC00NjQ4OTQyNzksMTQxNz
-M0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2
-LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbMTgwOTU2NzM4OSwtNDY0ODk0Mjc5LDE0MT
+czNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgzODcy
+NiwyMDQwMjk3NjIyXX0=
 -->
