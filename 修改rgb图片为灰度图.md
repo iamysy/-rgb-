@@ -28,6 +28,11 @@ arr = sitk.GetArrayFromImage(ds)
 ```
 - 思路3：
 	- 根据scikit-image的rgb2gray库进行灰度图的转化
+	- 使用opencv进行灰度图的转化
+```
+# 需要遍历每个dcm的每帧
+for i in range
+```
 	- 根据scikit-image的公式自己编写公式（dot）进行灰度图的转化
 ```
 gray_arr = np.dot(arr[...,:3], [0.2989, 0.5870, 0.1140]).astype(np.uint8)
@@ -57,7 +62,8 @@ arr = sitk.GetArrayFromImage(ds)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDA4NzEyMzUsOTIwMzEwMjY2LC00MT
-g2NzI1NDEsLTQ2NDg5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5
-NywtNjc1NDU3OTg4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbMTc5MDgzODk0NywtMTgwMDg3MTIzNSw5Mj
+AzMTAyNjYsLTQxODY3MjU0MSwtNDY0ODk0Mjc5LDE0MTczNDg5
+NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgzODcyNiwyMD
+QwMjk3NjIyXX0=
 -->
