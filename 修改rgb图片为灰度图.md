@@ -1,11 +1,20 @@
 
 # 总目的：将三通道（RGB）dcm文件转为单通道dcm文件
 ## 注意！
-不可以将dcm文件内的tag信息修改或是打乱顺序
-最好是可以在内存中解决RGB图->灰度图
+1.不可以将dcm文件内的tag信息修改或是打乱顺序
+2.最好是可以在内存中解决RGB图->灰度图
 
+### 具体实现
 
+ - 关于问题2
+无法实现在内存中直接修改图形类型，例如：
+```
+import SimpleITK as sitk
+import numpy as np
 
+arr = 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTEzNTg4MzM5MDAsLTE1NDgzODcyNiwyMD
+QwMjk3NjIyXX0=
 -->
