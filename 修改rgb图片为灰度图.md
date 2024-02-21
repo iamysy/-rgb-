@@ -18,8 +18,8 @@ arr = sitk.GetArrayFromImage(ds)
 # arr将ds内的image以numpy数组形式表示
 ```
 此处无法直接修改arr而改变ds，因为导入的dcm的文件格式是按照rgb图像的格式构建的
-
+- 关于问题1，由于问题2的不可实现，所以仍然需要重新建立一个dcm文件来存储numpy数组与tag信息并构成新的dcm文件
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwND
-AyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbMjA3MjUwMzQ5NywtNjc1NDU3OTg4LC0xNT
+Q4Mzg3MjYsMjA0MDI5NzYyMl19
 -->
