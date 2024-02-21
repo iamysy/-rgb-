@@ -39,25 +39,12 @@ for i in range(input_arr.shape[0]):
 gray_arr = np.dot(arr[...,:3], [0.2989, 0.5870, 0.1140]).astype(np.uint8)
 ```
 - 思路4：
+使用字典存储tag信息，放置后续dicom中丢失信息，如果丢失可以从tag中提取然后塞入信息中
 ```
-
 # 创建tags字典存储tag信息
-
 tags = {}
-
 for key in input_dcm.GetMetaDataKeys():
-
-	gray_image.SetMetaData(key, input_dcm.GetMetaData(key).encode('utf-8', 'ignore').decode('utf-8'))
-
-tags[key] = input_dcm.GetMetaData(key).encode('utf-8', 'ignore').decode('utf-8')
-
-# print(key, ':', input_dcm.GetMetaData(key))
-
-# print(f"{key} : {input_dcm.GetMetaData(key)}")
-
-# print(tags)
-
-return tags
+	tags[key] = input_dcm.GetMetaData(key).encode('utf-8', 'ignore').decode('utf-8')
 ```
 
 
@@ -83,8 +70,8 @@ arr = sitk.GetArrayFromImage(ds)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNTEyOTcwNiwxNzkwODM4OTQ3LC0xOD
-AwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00NjQ4OTQy
-NzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMT
-U0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbODc1MDgzMjQyLDE3OTA4Mzg5NDcsLTE4MD
+A4NzEyMzUsOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2NDg5NDI3
+OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OTg4LC0xNT
+Q4Mzg3MjYsMjA0MDI5NzYyMl19
 -->
