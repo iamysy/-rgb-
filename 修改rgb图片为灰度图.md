@@ -17,7 +17,8 @@ arr = sitk.GetArrayFromImage(ds)
 # ds读取文件
 # arr将ds内的image以numpy数组形式表示
 ```
+此处无法直接修改arr而改变ds，因为导入的dcm的w
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyNDQ4NTI0NywtMTU0ODM4NzI2LDIwND
+eyJoaXN0b3J5IjpbLTgxMTM1ODYxOSwtMTU0ODM4NzI2LDIwND
 AyOTc2MjJdfQ==
 -->
