@@ -61,11 +61,10 @@ for key in input_dcm.GetMetaDataKeys():
 	tags[key] = input_dcm.GetMetaData(key).encode('utf-8', 'ignore').decode('utf-8')
 ```
 - 思路5：创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
-
-
-
-
-
+```
+# 先将numpy数组转为像素信息
+gray_img = sitk,G
+```
 
 
 
@@ -74,8 +73,8 @@ for key in input_dcm.GetMetaDataKeys():
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTU3NjY2ODgsMTc5MDgzODk0NywtMT
-gwMDg3MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MSwtNDY0ODk0
-Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLT
-E1NDgzODcyNiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbLTU1MDEyNTQzMSwtMTExNTc2NjY4OCwxNz
+kwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4Njcy
+NTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLT
+Y3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 -->
