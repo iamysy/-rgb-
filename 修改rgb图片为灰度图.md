@@ -19,9 +19,12 @@
 -思路1：
 使用simpleITK读取dcm文件
 ```
-
+ds = sitk.ReadImage(input_dcm_path)
 ```
-
+- 思路2：
+```
+arr = sitk.GetArrayFromImage(ds)
+```
 
 
 
@@ -46,7 +49,7 @@ arr = sitk.GetArrayFromImage(ds)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4MDcxNjE5LC00NjQ4OTQyNzksMTQxNz
-M0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2
-LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbLTQxODY3MjU0MSwtNDY0ODk0Mjc5LDE0MT
+czNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgzODcy
+NiwyMDQwMjk3NjIyXX0=
 -->
