@@ -6,7 +6,7 @@
 3.用simpleITK
 4.不要使用手动输入公式来对数据进行处理
 5.读取dicom的tag组成新的dicom
-6.
+
 
 ### 具体实现
 
@@ -24,9 +24,12 @@ arr = sitk.GetArrayFromImage(ds)
 此处无法直接修改arr而改变ds，因为导入的dcm的文件格式是按照rgb图像的格式构建的
 - 关于问题1，由于问题2的不可实现，所以仍然需要重新建立一个dcm文件来存储numpy数组与tag信息并构成新的dcm文件
 
-###
+### 思路
+1.先读取dcm文件
+2.读取表示图像的像素矩阵，转化为numpy数组
+3.读取dcm中
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NDg5NDI3OSwxNDE3MzQ4OTUsMjA3Mj
-UwMzQ5NywtNjc1NDU3OTg4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYy
-Ml19
+eyJoaXN0b3J5IjpbMTQ3MDI3NzUxLC00NjQ4OTQyNzksMTQxNz
+M0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2
+LDIwNDAyOTc2MjJdfQ==
 -->
