@@ -3,6 +3,9 @@
 ## 注意！
 1.不可以将dcm文件内的tag信息修改或是打乱顺序
 2.最好是可以在内存中解决RGB图->灰度图
+3.用simpleITK
+4.不要使用手动输入公式来对数据进行处理
+5.
 
 ### 具体实现
 
@@ -19,7 +22,9 @@ arr = sitk.GetArrayFromImage(ds)
 ```
 此处无法直接修改arr而改变ds，因为导入的dcm的文件格式是按照rgb图像的格式构建的
 - 关于问题1，由于问题2的不可实现，所以仍然需要重新建立一个dcm文件来存储numpy数组与tag信息并构成新的dcm文件
+
+###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MjUwMzQ5NywtNjc1NDU3OTg4LC0xNT
-Q4Mzg3MjYsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTk1MzI5NTg5NCwyMDcyNTAzNDk3LC02Nz
+U0NTc5ODgsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
 -->
