@@ -22,9 +22,11 @@
 ds = sitk.ReadImage(input_dcm_path)
 ```
 - 思路2：
+使用getarrayfromimage仅获取dcm中包含的像素数据
 ```
 arr = sitk.GetArrayFromImage(ds)
 ```
+- 思路3：
 
 
 
@@ -49,7 +51,7 @@ arr = sitk.GetArrayFromImage(ds)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxODY3MjU0MSwtNDY0ODk0Mjc5LDE0MT
-czNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgzODcy
-NiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2ND
+g5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OTg4
+LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
 -->
