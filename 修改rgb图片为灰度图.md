@@ -67,7 +67,10 @@ gray_img = sitk.GetImageFromArray(gray_arr)
 # 再将tags内的信息存入至dcm文件内
 for tag,value in tags.items():
 	gray_image.SetMetaData(str(tag), str(value))
-# 存入tag会出现，漏传（group lenth），错传(series uid)，无法识别
+# 存入tag会出现，漏传（group lenth），错传(series uid)，无法识别(patien's id)需要手动添加
+
+# 再将img保存
+sitk.WriteImage(gray_image, output_dcm_path)
 ```
 
 
@@ -77,8 +80,8 @@ for tag,value in tags.items():
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MzExOTExOCwtMTExNTc2NjY4OCwxNz
-kwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4Njcy
-NTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLT
-Y3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbLTE4ODU1NDY1NTcsLTExMTU3NjY2ODgsMT
+c5MDgzODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQxODY3
+MjU0MSwtNDY0ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3LC
+02NzU0NTc5ODgsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
 -->
