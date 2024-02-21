@@ -11,8 +11,8 @@
 1.先读取dcm文件
 2.读取表示图像的像素矩阵，转化为numpy数组
 3.将rgb图像的numpy数组转化为灰度图像的numpy数组
-3.读取dcm中的tag信息，作为key-value内容
-4.创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
+4.读取dcm中的tag信息，作为key-value内容
+5.创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
 
 
 ## 具体实现
@@ -27,6 +27,8 @@ ds = sitk.ReadImage(input_dcm_path)
 arr = sitk.GetArrayFromImage(ds)
 ```
 - 思路3：
+	- 根据scikit-image
+	- 根据scikit-image的公式自己编写公式（dot）进行
 
 
 
@@ -51,7 +53,7 @@ arr = sitk.GetArrayFromImage(ds)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2ND
-g5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OTg4
-LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbMTk4Njg1Mjc5Myw5MjAzMTAyNjYsLTQxOD
+Y3MjU0MSwtNDY0ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3
+LC02NzU0NTc5ODgsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
 -->
