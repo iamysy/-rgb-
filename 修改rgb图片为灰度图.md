@@ -7,6 +7,7 @@
 4.不要使用手动输入公式来对数据进行处理
 5.读取dicom的tag组成新的dicom
 
+
 ### 具体实现
 
  - 关于问题2
@@ -25,6 +26,7 @@ arr = sitk.GetArrayFromImage(ds)
 
 ###
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NT
-Q1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbLTE0MzIyNDc4MDcsMTQxNzM0ODk1LDIwNz
+I1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2
+MjJdfQ==
 -->
