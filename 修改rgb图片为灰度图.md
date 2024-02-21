@@ -12,9 +12,12 @@
 import SimpleITK as sitk
 import numpy as np
 
-arr = 
+ds = sitk.ReadImage(input_dcm_path)
+arr = sitk.GetArrayFromImage(ds)
+# ds读取文件
+# arr将ds内的image以numpy数组形式表示
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTg4MzM5MDAsLTE1NDgzODcyNiwyMD
-QwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTkyNDQ4NTI0NywtMTU0ODM4NzI2LDIwND
+AyOTc2MjJdfQ==
 -->
