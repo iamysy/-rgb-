@@ -1,14 +1,33 @@
 
 # 总目的：将三通道（RGB）dcm文件转为单通道dcm文件
-## 注意！
+### 注意！
 1.不可以将dcm文件内的tag信息修改或是打乱顺序
 2.最好是可以在内存中解决RGB图->灰度图
 3.用simpleITK
 4.不要使用手动输入公式来对数据进行处理
 5.读取dicom的tag组成新的dicom
 
+## 思路
+1.先读取dcm文件
+2.读取表示图像的像素矩阵，转化为numpy数组
+3.将rgb图像的numpy数组转化为灰度图像的numpy数组
+3.读取dcm中的tag信息，作为key-value内容
+4.创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
 
-### 具体实现
+
+## 具体实现
+-思路1：
+使用simpleITK读取dcm文件
+```
+
+```
+
+
+
+
+
+
+
 
  - 关于问题2
 无法实现在内存中直接修改图形类型，例如：
@@ -24,14 +43,10 @@ arr = sitk.GetArrayFromImage(ds)
 此处无法直接修改arr而改变ds，因为导入的dcm的文件格式是按照rgb图像的格式构建的
 - 关于问题1，由于问题2的不可实现，所以仍然需要重新建立一个dcm文件来存储numpy数组与tag信息并构成新的dcm文件
 
-### 思路
-1.先读取dcm文件
-2.读取表示图像的像素矩阵，转化为numpy数组
-3.将rgb图像的numpy数组转化为灰度图像的numpy数组
-3.读取dcm中的tag信息，作为key-value内容
-4.创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg1MDQ2NDQ5LC00NjQ4OTQyNzksMTQxNz
+eyJoaXN0b3J5IjpbMzc4MDcxNjE5LC00NjQ4OTQyNzksMTQxNz
 M0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2
 LDIwNDAyOTc2MjJdfQ==
 -->
