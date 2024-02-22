@@ -74,7 +74,7 @@ gray_image.SetMetaData("0010|0010", patients_name)
 # 再将img保存
 sitk.WriteImage(gray_image, output_dcm_path)
 ```
-
+- 注意在tag信息转移中，会有
 
 
 
@@ -82,9 +82,9 @@ sitk.WriteImage(gray_image, output_dcm_path)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MzY3MDgxMCwtMTg4NTU0NjU1NywtMT
-ExNTc2NjY4OCwxNzkwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMx
-MDI2NiwtNDE4NjcyNTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LD
-IwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAy
-OTc2MjJdfQ==
+eyJoaXN0b3J5IjpbNTk2NjgwMjkxLDEyNzM2NzA4MTAsLTE4OD
+U1NDY1NTcsLTExMTU3NjY2ODgsMTc5MDgzODk0NywtMTgwMDg3
+MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MSwtNDY0ODk0Mjc5LD
+E0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgz
+ODcyNiwyMDQwMjk3NjIyXX0=
 -->
