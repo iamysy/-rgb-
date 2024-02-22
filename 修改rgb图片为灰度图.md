@@ -69,8 +69,8 @@ for tag,value in tags.items():
 	gray_image.SetMetaData(str(tag), str(value))
 # 存入tag会出现，漏传（group lenth），错传(series uid)，无法识别(patien's id)需要手动添加
 # 手动添加的方式与上述方法相同，不过是用 组号|元素 来替代tag，用指定的str替代value
-
-
+patients_name = "John"
+gray_image.SetMetaData("0010|0010", patients_name)
 # 再将img保存
 sitk.WriteImage(gray_image, output_dcm_path)
 ```
@@ -82,7 +82,7 @@ sitk.WriteImage(gray_image, output_dcm_path)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0Mjg4MDMwMywtMTg4NTU0NjU1NywtMT
+eyJoaXN0b3J5IjpbMTI3MzY3MDgxMCwtMTg4NTU0NjU1NywtMT
 ExNTc2NjY4OCwxNzkwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMx
 MDI2NiwtNDE4NjcyNTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LD
 IwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAy
