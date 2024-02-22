@@ -79,8 +79,12 @@ sitk.WriteImage(gray_image, output_dcm_path)
 		- dcm文件的编码形式由’0008|0005表示‘
 	- 尝试的解决方法：
 		- 1.使用编码形式转化
-			- 暂时无进展
-		- 2.使用pydicom读取
+			- 可以使用
+```
+
+```
+
+- 2.使用pydicom读取
 			- 读取并输出可以正常显示tag中的name
 
 
@@ -89,10 +93,10 @@ sitk.WriteImage(gray_image, output_dcm_path)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MT
-k3ODczMzUsMTI3MzY3MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2
-NjY4OCwxNzkwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2Ni
-wtNDE4NjcyNTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1
-MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2Mj
-JdfQ==
+eyJoaXN0b3J5IjpbLTEyNDAzODQwNjIsLTE3MzYzMTMyMSwxNz
+A1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3MDgxMCwtMTg4NTU0
+NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OTQ3LC0xODAwODcxMj
+M1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00NjQ4OTQyNzksMTQx
+NzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4Nz
+I2LDIwNDAyOTc2MjJdfQ==
 -->
