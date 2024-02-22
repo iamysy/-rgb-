@@ -80,7 +80,8 @@ sitk.WriteImage(gray_image, output_dcm_path)
 ```
 import chardet
 
-#使用chardet来查看tags内名字信息的编码形式
+# 使用chardet来查看tags内名字信息的编码形式
+# 但是使用chardet来查看编码形式需要把str形式变为
 ```
 
 
@@ -89,7 +90,7 @@ import chardet
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTY4NDQ5NCwxNTE5Nzg3MzM1LDEyNz
+eyJoaXN0b3J5IjpbMTcwNTIxMDQ0MiwxNTE5Nzg3MzM1LDEyNz
 M2NzA4MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2ODgsMTc5MDgz
 ODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MS
 wtNDY0ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0
