@@ -74,7 +74,8 @@ gray_image.SetMetaData("0010|0010", patients_name)
 # 再将img保存
 sitk.WriteImage(gray_image, output_dcm_path)
 ```
-- 注意在tag信息转移中，会有
+- 注意步骤5中，部分tag信息含有中文，在转移中，会出现编码错误导致不能正确转移name的状况
+	- 解决该问题需要明确中文内容编码错误在哪儿，需要怎么改
 
 
 
@@ -82,9 +83,9 @@ sitk.WriteImage(gray_image, output_dcm_path)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2NjgwMjkxLDEyNzM2NzA4MTAsLTE4OD
-U1NDY1NTcsLTExMTU3NjY2ODgsMTc5MDgzODk0NywtMTgwMDg3
-MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MSwtNDY0ODk0Mjc5LD
-E0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5ODgsLTE1NDgz
-ODcyNiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTUxOTc4NzMzNSwxMjczNjcwODEwLC0xOD
+g1NTQ2NTU3LC0xMTE1NzY2Njg4LDE3OTA4Mzg5NDcsLTE4MDA4
+NzEyMzUsOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2NDg5NDI3OS
+wxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OTg4LC0xNTQ4
+Mzg3MjYsMjA0MDI5NzYyMl19
 -->
