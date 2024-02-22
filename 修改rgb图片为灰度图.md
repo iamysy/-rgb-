@@ -76,6 +76,7 @@ sitk.WriteImage(gray_image, output_dcm_path)
 ```
 - 注意步骤5中，部分tag信息含有中文，在转移中，会出现编码错误导致不能正确转移name的状况
 	- 解决该问题需要明确中文内容编码错误在哪儿，需要怎么改
+	- chang'sh
 
 
 
@@ -83,9 +84,9 @@ sitk.WriteImage(gray_image, output_dcm_path)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxOTc4NzMzNSwxMjczNjcwODEwLC0xOD
-g1NTQ2NTU3LC0xMTE1NzY2Njg4LDE3OTA4Mzg5NDcsLTE4MDA4
-NzEyMzUsOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2NDg5NDI3OS
-wxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OTg4LC0xNTQ4
-Mzg3MjYsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTE3MTkzNDQxMjUsMTUxOTc4NzMzNSwxMj
+czNjcwODEwLC0xODg1NTQ2NTU3LC0xMTE1NzY2Njg4LDE3OTA4
+Mzg5NDcsLTE4MDA4NzEyMzUsOTIwMzEwMjY2LC00MTg2NzI1ND
+EsLTQ2NDg5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1
+NDU3OTg4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
 -->
