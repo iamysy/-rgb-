@@ -76,13 +76,9 @@ sitk.WriteImage(gray_image, output_dcm_path)
 ```
 - 注意步骤5中，部分tag信息含有中文，在转移中，会出现编码错误导致不能正确转移name的状况
 	- 解决该问题需要明确中文内容编码错误在哪儿，需要怎么改
+		- dcm文件的编码形式由’0008|0005表示‘
 	- 尝试的解决方法：
-```
-import chardet
-
-# 使用chardet来查看tags内名字信息的编码形式
-# 但是使用chardet来查看编码形式需要把str形式变为
-```
+		- 1.使用
 
 
 
@@ -90,9 +86,10 @@ import chardet
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNTIxMDQ0MiwxNTE5Nzg3MzM1LDEyNz
-M2NzA4MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2ODgsMTc5MDgz
-ODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MS
-wtNDY0ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0
-NTc5ODgsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbMTIzOTM1Njc0MCwxNzA1MjEwNDQyLDE1MT
+k3ODczMzUsMTI3MzY3MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2
+NjY4OCwxNzkwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2Ni
+wtNDE4NjcyNTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1
+MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2Mj
+JdfQ==
 -->
