@@ -81,7 +81,8 @@ sitk.WriteImage(gray_image, output_dcm_path)
 		- 1.使用编码形式转化
 			- 可以使用
 ```
-
+# 使用strip()
+patient_name = input_dcm.GetMetaData('0010|0010').strip().encode("utf-8", "surrogateescape").decode('gbk', 'replace')
 ```
 
 - 2.使用pydicom读取
@@ -93,10 +94,10 @@ sitk.WriteImage(gray_image, output_dcm_path)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDAzODQwNjIsLTE3MzYzMTMyMSwxNz
-A1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3MDgxMCwtMTg4NTU0
-NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OTQ3LC0xODAwODcxMj
-M1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00NjQ4OTQyNzksMTQx
-NzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nzk4OCwtMTU0ODM4Nz
-I2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbLTE3MzIzMzk5ODgsLTEyNDAzODQwNjIsLT
+E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
+MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
+Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
+NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nz
+k4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 -->
