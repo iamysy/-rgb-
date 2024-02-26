@@ -119,6 +119,9 @@ for subfolder in subfolders:
 	new_path = path.replace('data', 'data1')
 	os.makedirs(new_path, exist_ok=True)
 	for name in files:
+		input_name_path = name
+		output_name_path = new_path
+		转化函数（input_name_path, output_name_path）
 ```
 
 
@@ -127,7 +130,7 @@ for subfolder in subfolders:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMjcyNjU2OCw5MzkwMjg0NDIsMTM1MT
+eyJoaXN0b3J5IjpbLTM0NDUzNzUyNyw5MzkwMjg0NDIsMTM1MT
 kyOTI0MCwtMTI0MDM4NDA2MiwtMTczNjMxMzIxLDE3MDUyMTA0
 NDIsMTUxOTc4NzMzNSwxMjczNjcwODEwLC0xODg1NTQ2NTU3LC
 0xMTE1NzY2Njg4LDE3OTA4Mzg5NDcsLTE4MDA4NzEyMzUsOTIw
