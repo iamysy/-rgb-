@@ -115,7 +115,8 @@ file = '/data'
 subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
 for subfolder in subfolders:
 	path  = file + '/' + subfolder
-	files = [os.path.join(path
+	files = [os.path.join(path, f) for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
+	new_path = 
 ```
 
 
@@ -124,7 +125,7 @@ for subfolder in subfolders:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NTU0NTY4NSwxMzUxOTI5MjQwLC0xMj
+eyJoaXN0b3J5IjpbLTc3NTM2ODUxOSwxMzUxOTI5MjQwLC0xMj
 QwMzg0MDYyLC0xNzM2MzEzMjEsMTcwNTIxMDQ0MiwxNTE5Nzg3
 MzM1LDEyNzM2NzA4MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2OD
 gsMTc5MDgzODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQx
