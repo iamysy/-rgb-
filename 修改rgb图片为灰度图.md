@@ -97,9 +97,21 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 	- 根据目录内容进行遍历
 	- 将转化后的文件以同样的名字命名，并保存在另一个文件夹下
 ```
+- data
+	- folder1
+		- file1
+		- file2
+		- ...
+	- folder2
+	- ...
+```
+
+
+```
 # 举例说明
 file = '/data'
-subfolder = 
+# 新建变量subfolder来保存file下的所有文件夹 
+subfolder = [os]
 ```
 
 
@@ -108,7 +120,7 @@ subfolder =
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDQ4MTk5OTksLTEyNDAzODQwNjIsLT
+eyJoaXN0b3J5IjpbLTE2NzEyODAzODgsLTEyNDAzODQwNjIsLT
 E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
 MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
 Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
