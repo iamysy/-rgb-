@@ -27,6 +27,7 @@ arr = sitk.GetArrayFromImage(ds)
 3.将rgb图像的numpy数组转化为灰度图像的numpy数组
 4.读取dcm中的tag信息，作为key-value内容
 5.创建一个新的dcm类型的文件，将表示灰度图像的numpy数组与tag信息进行组合作为dcm文件输出
+6.单个案例成功后，对文件加进行遍历处理
 
 
 ## 具体实现
@@ -91,6 +92,7 @@ dicom_file = pydicom.dcmread(input_dcm_path)
 patient_name = dicom_file.PatientName
 patient_name = patient_name.encode('utf-8').decode('utf-8')
 ```
+- 思路6：单个案例成功后，对文件加进行遍历处理
 
 
 
@@ -99,10 +101,10 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjI4NjQ5NSwtMTI0MDM4NDA2MiwtMT
-czNjMxMzIxLDE3MDUyMTA0NDIsMTUxOTc4NzMzNSwxMjczNjcw
-ODEwLC0xODg1NTQ2NTU3LC0xMTE1NzY2Njg4LDE3OTA4Mzg5ND
-csLTE4MDA4NzEyMzUsOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2
-NDg5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OT
-g4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbLTEyMzM1NDg0MzIsLTEyNDAzODQwNjIsLT
+E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
+MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
+Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
+NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nz
+k4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 -->
