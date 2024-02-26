@@ -110,11 +110,12 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 file = '/data'
 # 新建变量subfolder来保存file下的所有文件夹 
 # os.scandir(file)用来获取file下每个条目的信息
-# os.path.basename(f.path)用来获取file下每个条目地址的最后一个信息即文件名
+# os.path.basename(f.path)用来获取file下每个条目地址的最后一个信息即文件名或目录名
 # 用if f.is_dir()检查f即遍历获得的条目信息是否为目录
 subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
-for subfolde in subfolder:
-	path  = file + '/' +subfold
+for subfolder in subfolders:
+	path  = file + '/' + subfolder
+	files = [os.path.join(path
 ```
 
 
@@ -123,7 +124,7 @@ for subfolde in subfolder:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NDQ4NzU2NCwxMzUxOTI5MjQwLC0xMj
+eyJoaXN0b3J5IjpbLTk4NTU0NTY4NSwxMzUxOTI5MjQwLC0xMj
 QwMzg0MDYyLC0xNzM2MzEzMjEsMTcwNTIxMDQ0MiwxNTE5Nzg3
 MzM1LDEyNzM2NzA4MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2OD
 gsMTc5MDgzODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQx
