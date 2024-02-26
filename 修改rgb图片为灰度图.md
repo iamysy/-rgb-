@@ -113,6 +113,7 @@ file = '/data'
 # 新建变量subfolder来保存file下的所有文件夹 
 # os.scandir(file)用来获取file下每个条目的信息
 # os.path.basename(f.path)用来获取file下每个条目地址的最后一个信息即文件名
+# 用if f.is_dir()
 subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
 ```
 
@@ -122,11 +123,11 @@ subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQxMTAzNTEsMTM1MTkyOTI0MCwtMT
-I0MDM4NDA2MiwtMTczNjMxMzIxLDE3MDUyMTA0NDIsMTUxOTc4
-NzMzNSwxMjczNjcwODEwLC0xODg1NTQ2NTU3LC0xMTE1NzY2Nj
-g4LDE3OTA4Mzg5NDcsLTE4MDA4NzEyMzUsOTIwMzEwMjY2LC00
-MTg2NzI1NDEsLTQ2NDg5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMz
-Q5NywtNjc1NDU3OTg4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
+eyJoaXN0b3J5IjpbNzYyODg2NDI4LDEzNTE5MjkyNDAsLTEyND
+AzODQwNjIsLTE3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODcz
+MzUsMTI3MzY3MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OC
+wxNzkwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4
+NjcyNTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OT
+csLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 
 -->
