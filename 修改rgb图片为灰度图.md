@@ -95,9 +95,11 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 - 思路6：单个案例成功后，对文件加进行遍历处理
 	- 首先确定文件夹的格式，各个目录的内容
 	- 根据目录内容进行遍历
-	- 将转化后的文件
+	- 将转化后的文件以同样的名字命名，并保存在另一个文件夹下
 ```
-
+# 举例说明
+file = '/data'
+subfolder = 
 ```
 
 
@@ -106,7 +108,7 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjUxNjE4NzAsLTEyNDAzODQwNjIsLT
+eyJoaXN0b3J5IjpbLTE1MDQ4MTk5OTksLTEyNDAzODQwNjIsLT
 E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
 MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
 Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
