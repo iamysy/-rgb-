@@ -82,7 +82,7 @@ sitk.WriteImage(gray_image, output_dcm_path)
 			- 可以使用
 ```
 # 使用strip()移除str以外的字符
-# 
+# 使用surrogateescape，允许在字节到字符串的转换zhon
 patient_name = input_dcm.GetMetaData('0010|0010').strip().encode("utf-8", "surrogateescape").decode('gbk', 'replace')
 ```
 
@@ -95,10 +95,10 @@ patient_name = input_dcm.GetMetaData('0010|0010').strip().encode("utf-8", "surro
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTUyMDg0OTEsLTEyNDAzODQwNjIsLT
-E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
-MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
-Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
-NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nz
-k4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbODYxMTA4MDczLC0xMjQwMzg0MDYyLC0xNz
+M2MzEzMjEsMTcwNTIxMDQ0MiwxNTE5Nzg3MzM1LDEyNzM2NzA4
+MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2ODgsMTc5MDgzODk0Ny
+wtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MSwtNDY0
+ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5OD
+gsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
 -->
