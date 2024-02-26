@@ -111,7 +111,7 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 # 举例说明
 file = '/data'
 # 新建变量subfolder来保存file下的所有文件夹 
-subfolder = [os]
+subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
 ```
 
 
@@ -120,10 +120,10 @@ subfolder = [os]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzEyODAzODgsLTEyNDAzODQwNjIsLT
-E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
-MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
-Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
-NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nz
-k4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbMTM1MTkyOTI0MCwtMTI0MDM4NDA2MiwtMT
+czNjMxMzIxLDE3MDUyMTA0NDIsMTUxOTc4NzMzNSwxMjczNjcw
+ODEwLC0xODg1NTQ2NTU3LC0xMTE1NzY2Njg4LDE3OTA4Mzg5ND
+csLTE4MDA4NzEyMzUsOTIwMzEwMjY2LC00MTg2NzI1NDEsLTQ2
+NDg5NDI3OSwxNDE3MzQ4OTUsMjA3MjUwMzQ5NywtNjc1NDU3OT
+g4LC0xNTQ4Mzg3MjYsMjA0MDI5NzYyMl19
 -->
