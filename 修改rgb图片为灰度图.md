@@ -116,7 +116,8 @@ subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
 for subfolder in subfolders:
 	path  = file + '/' + subfolder
 	files = [os.path.join(path, f) for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
-	new_path = 
+	new_path = path.replace('data', 'data1')
+	
 ```
 
 
@@ -125,11 +126,11 @@ for subfolder in subfolders:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NTM2ODUxOSwxMzUxOTI5MjQwLC0xMj
-QwMzg0MDYyLC0xNzM2MzEzMjEsMTcwNTIxMDQ0MiwxNTE5Nzg3
-MzM1LDEyNzM2NzA4MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2OD
-gsMTc5MDgzODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQx
-ODY3MjU0MSwtNDY0ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzND
-k3LC02NzU0NTc5ODgsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
+eyJoaXN0b3J5IjpbOTM5MDI4NDQyLDEzNTE5MjkyNDAsLTEyND
+AzODQwNjIsLTE3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODcz
+MzUsMTI3MzY3MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OC
+wxNzkwODM4OTQ3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4
+NjcyNTQxLC00NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OT
+csLTY3NTQ1Nzk4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
 
 -->
