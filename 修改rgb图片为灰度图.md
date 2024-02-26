@@ -105,8 +105,6 @@ patient_name = patient_name.encode('utf-8').decode('utf-8')
 	- folder2
 	- ...
 ```
-
-
 ```
 # 举例说明
 file = '/data'
@@ -115,6 +113,8 @@ file = '/data'
 # os.path.basename(f.path)用来获取file下每个条目地址的最后一个信息即文件名
 # 用if f.is_dir()检查f即遍历获得的条目信息是否为目录
 subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
+for subfolde in subfolder:
+	path  = file + '/' +subfold
 ```
 
 
@@ -123,7 +123,7 @@ subfolder = [os.path.basename(f.path) for f in os.scandir(file) if f.is_dir()]
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTM2NjU0NiwxMzUxOTI5MjQwLC0xMj
+eyJoaXN0b3J5IjpbLTg5NDQ4NzU2NCwxMzUxOTI5MjQwLC0xMj
 QwMzg0MDYyLC0xNzM2MzEzMjEsMTcwNTIxMDQ0MiwxNTE5Nzg3
 MzM1LDEyNzM2NzA4MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2OD
 gsMTc5MDgzODk0NywtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQx
