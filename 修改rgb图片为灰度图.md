@@ -85,7 +85,12 @@ sitk.WriteImage(gray_image, output_dcm_path)
 # 使用surrogateescape，允许在字节到字符串的转换中保留无法直接转换的数据，尤其是在本case中可以使用
 patient_name = input_dcm.GetMetaData('0010|0010').strip().encode("utf-8", "surrogateescape").decode('gbk', 'replace')
 ```
-		可以使用
+		可以使用pydicom读取出tag信息，再将tag信息进行编码转化
+```
+dicom_file = pydicom.dcmread(input_dcm_path)
+patient_name = dicom_file.PatientName
+patient_name = patient_name.encode('utf-8').decode('utf-8')
+```
 
 
 - 2.使用pydicom读取
@@ -97,10 +102,10 @@ patient_name = input_dcm.GetMetaData('0010|0010').strip().encode("utf-8", "surro
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTA2OTg0MzUsLTEyNDAzODQwNjIsLT
-E3MzYzMTMyMSwxNzA1MjEwNDQyLDE1MTk3ODczMzUsMTI3MzY3
-MDgxMCwtMTg4NTU0NjU1NywtMTExNTc2NjY4OCwxNzkwODM4OT
-Q3LC0xODAwODcxMjM1LDkyMDMxMDI2NiwtNDE4NjcyNTQxLC00
-NjQ4OTQyNzksMTQxNzM0ODk1LDIwNzI1MDM0OTcsLTY3NTQ1Nz
-k4OCwtMTU0ODM4NzI2LDIwNDAyOTc2MjJdfQ==
+eyJoaXN0b3J5IjpbNzcwNzQ2NTA1LC0xMjQwMzg0MDYyLC0xNz
+M2MzEzMjEsMTcwNTIxMDQ0MiwxNTE5Nzg3MzM1LDEyNzM2NzA4
+MTAsLTE4ODU1NDY1NTcsLTExMTU3NjY2ODgsMTc5MDgzODk0Ny
+wtMTgwMDg3MTIzNSw5MjAzMTAyNjYsLTQxODY3MjU0MSwtNDY0
+ODk0Mjc5LDE0MTczNDg5NSwyMDcyNTAzNDk3LC02NzU0NTc5OD
+gsLTE1NDgzODcyNiwyMDQwMjk3NjIyXX0=
 -->
